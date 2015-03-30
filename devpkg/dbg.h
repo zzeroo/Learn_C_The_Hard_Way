@@ -6,9 +6,9 @@
 #include <string.h>
 
 #ifdef NDEBUG
-  #define debug(M, ...)
+#define debug(M, ...)
 #else
-  #define debug(M, ...) fprintf(stderr, "DEBUG %s:%d: " M "\n", __FILE__, __LINE__, ##__VA_ARGS__)
+#define debug(M, ...) fprintf(stderr, "DEBUG %s:%d: " M "\n", __FILE__, __LINE__, ##__VA_ARGS__)
 #endif
 
 #define clean_errno() (errno == 0 ? "None" : strerror(errno))
